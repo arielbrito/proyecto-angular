@@ -1,0 +1,18 @@
+<div class="container" >
+   <div class="col-md-8 offset-md-2 mb-4 "> <h1 class="text-center display-3">Proyectos</h1></div> 
+    
+    <div class="row" >     
+        <div class=" proyectos col-md-4 " *ngFor="let proyecto of proyectos" >
+                <div class="card mb-3 "  >
+                        <img [src]=" 'http://localhost:3700/api/get-image/'+proyecto.image | safeUrl" *ngIf="proyecto.image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title"> <strong>Nombre:</strong>  {{proyecto.name}} </h5>                         
+                          <p class="card-text"> <strong>Categoria:</strong> {{proyecto.category}}</p>                          
+                          <p class="card-text"> <strong>Lenguaje:</strong>  {{proyecto.langs}}</p>
+                          <a id="boton-proyectos" [routerLink]="['/proyecto',proyecto._id]" class="btn ">Ver Proyecto</a>
+                        </div>
+                </div>
+
+        </div>
+    </div>
+</div>

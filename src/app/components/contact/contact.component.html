@@ -1,0 +1,33 @@
+<div class="container">
+   <h1>CONTACTO</h1>
+
+   <p appResaltado >Esta es la pagina de contacto, asi que puedes enviarnos cualquier duda...</p>
+             <div class="form-group col-md-4">
+                 <label for="tSlider">Tamaño del Slider: </label> 
+                 <input type="number" name="tSlider" [(ngModel)]="widthSlider" class="form-control form-control-sm"> 
+             </div>             
+            <button  (click)="cargarSlider()" class=" boton-slider btn btn-primary btn-sm">Cargar slider</button>
+            <button (click)="resetearSlider()" class=" boton-slider btn btn-primary btn-sm">Resetear Slider</button>
+        
+        <div *ngIf="anchuraToSlider">
+                <app-slider  [anchura]="anchuraToSlider"
+                (getAutor)="conseguirAutor($event)"
+                ></app-slider>
+         </div>
+         <hr>
+         
+ </div>
+
+        <div class="card ">
+                <div class="card-header">
+                        <h3>informacion sobre el autor</h3>
+                </div>
+                <div class="card-body" *ngIf="autor">
+                        <p class="card-text"> Autor: {{autor.nombre}} </p>
+                </div>
+        </div> 
+      
+      
+
+   
+    

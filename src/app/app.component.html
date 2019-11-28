@@ -1,0 +1,58 @@
+<header> 
+    <nav class="navbar navbar-expand-lg "  >
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-dark"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a class="nav-link"  [routerLink]="['/sobre-mi']" [routerLinkActive]="['activated']" > Sobre Mi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/proyectos']" [routerLinkActive]="['activated']" > Proyectos</a>
+            </li>
+              <li  class="nav-item">
+                <a id="logo" class="navbar-brand" href="#">ABR</a> 
+             </li> 
+            <li class="nav-item">
+                <a class="nav-link"  [routerLink]="['/crear-proyecto']" [routerLinkActive]="['activated']" > Crear Proyecto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" tabindex="-1" [routerLink]="['/contacto']"[routerLinkActive]="['activated']" > Contacto</a>              
+            </li>
+          </ul>
+        </div>
+     </nav>
+
+</header>
+<div class="container">
+
+<section id="content" >
+    <router-outlet></router-outlet>
+</section>
+
+<footer class="container">
+  <div class="row">
+    <div class="col-md-6">
+        <div class="card bg-light">
+          <div class="card-header">
+           Informacion Importante
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Nuestro Manifiesto</h5>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi atque quia cum, dolores quae fuga est eos enim facilis porro. Sed, provident impedit. Vel reiciendis aperiam aspernatur totam omnis cum.</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+      Aqui van las redes sociales
+    </div>
+    
+  </div> 
+  <p class="text-center lead">Ariel Amado Brito Rivera &copy;</p>
+</footer>
+
+</div>
+
+

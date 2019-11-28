@@ -1,0 +1,23 @@
+
+    <div class="card proyecto "  *ngIf="proyecto">
+        <div class="row no-gutters">
+                <div  class="col-md-4 imagen" *ngIf="proyecto.image">
+                     <img  class="card-img" [src]=" 'http://localhost:3700/api/get-image/'+proyecto.image | safeUrl">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h1 class="card-title display-4"> {{proyecto.name}} </h1>
+                        <p class="card-text"> <strong>Categoria:</strong>  {{proyecto.category}} </p>
+                        <p class="card-text text-justify"> <strong>Descripcion:</strong>  {{proyecto.description}}</p>
+                        <p class="card-text"> <strong>Lenguajes Utilizado: </strong> {{proyecto.langs}}</p>
+                        <p>
+                          <a [routerLink]=" ['/editar-proyecto', proyecto._id] "   class="btn btn-secondary mr-4">Actualizar</a>
+                          <a (click)="deleteProyecto(proyecto._id)" class="btn btn-danger">Eliminar</a>
+                        </p>
+
+                    </div>
+                </div>
+        </div>
+        
+
+    </div>
